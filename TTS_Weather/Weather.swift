@@ -5,7 +5,6 @@
 //  Created by Franks, Kent on 12/13/17.
 //  Copyright © 2017 KefBytes. All rights reserved.
 //
-
 import Foundation
 
 class Weather: Decodable {
@@ -53,16 +52,3 @@ class Weather: Decodable {
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

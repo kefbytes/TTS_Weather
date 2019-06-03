@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="smY-qZ-eIx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="smY-qZ-eIx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Optima.ttc">
-            <string>Optima-Regular</string>
-        </array>
-        <array key="Papyrus.ttc">
-            <string>Papyrus</string>
-        </array>
-        <array key="Thonburi.ttc">
-            <string>Thonburi</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--WeatherVC-->
         <scene sceneID="41x-OE-HhL">
             <objects>
-                <viewController id="smY-qZ-eIx" customClass="WeatherVC" customModule="Swift_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="smY-qZ-eIx" customClass="WeatherVC" customModule="TTS_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TkL-YW-Pzr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="Bvh-ul-xjI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="Bvh-ul-xjI">
+                                <rect key="frame" x="0.0" y="-40" width="375" height="747"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a city" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HDj-Am-Umh">
                                 <rect key="frame" x="100" y="170" width="175" height="30"/>
@@ -43,7 +31,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbY-1f-9ms">
-                                <rect key="frame" x="127" y="219" width="120" height="33"/>
+                                <rect key="frame" x="127.5" y="219" width="120" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Fetch Weather">
@@ -75,16 +63,20 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Bvh-ul-xjI" firstAttribute="leading" secondItem="Vn2-3D-krd" secondAttribute="leading" id="8S2-5k-I4S"/>
                             <constraint firstItem="HDj-Am-Umh" firstAttribute="top" secondItem="Vn2-3D-krd" secondAttribute="top" constant="150" id="AiZ-uq-3jz"/>
                             <constraint firstItem="gbY-1f-9ms" firstAttribute="centerX" secondItem="TkL-YW-Pzr" secondAttribute="centerX" id="G04-Vo-ol6"/>
                             <constraint firstItem="g97-0P-dTj" firstAttribute="centerX" secondItem="TkL-YW-Pzr" secondAttribute="centerX" id="GkF-gY-CMu"/>
                             <constraint firstItem="MqG-pN-nhd" firstAttribute="top" secondItem="g97-0P-dTj" secondAttribute="bottom" constant="-10" id="IQR-LJ-oSr"/>
+                            <constraint firstItem="Vn2-3D-krd" firstAttribute="trailing" secondItem="Bvh-ul-xjI" secondAttribute="trailing" id="Mih-oX-HXe"/>
+                            <constraint firstItem="Vn2-3D-krd" firstAttribute="bottom" secondItem="Bvh-ul-xjI" secondAttribute="bottom" constant="-40" id="QZf-cF-qBE"/>
                             <constraint firstItem="gbY-1f-9ms" firstAttribute="top" secondItem="HDj-Am-Umh" secondAttribute="bottom" constant="19" id="fBq-5Q-gzu"/>
                             <constraint firstItem="g97-0P-dTj" firstAttribute="top" secondItem="gbY-1f-9ms" secondAttribute="bottom" constant="35" id="fOa-EC-cPj"/>
                             <constraint firstItem="UG0-Wp-qzE" firstAttribute="centerX" secondItem="TkL-YW-Pzr" secondAttribute="centerX" id="fWB-Ne-6QF"/>
                             <constraint firstItem="MqG-pN-nhd" firstAttribute="centerX" secondItem="TkL-YW-Pzr" secondAttribute="centerX" id="hEn-NH-tpC"/>
                             <constraint firstItem="UG0-Wp-qzE" firstAttribute="top" secondItem="MqG-pN-nhd" secondAttribute="bottom" constant="-20" id="qyw-Bs-9Hi"/>
                             <constraint firstItem="HDj-Am-Umh" firstAttribute="centerX" secondItem="TkL-YW-Pzr" secondAttribute="centerX" id="u8a-Uc-d09"/>
+                            <constraint firstItem="Vn2-3D-krd" firstAttribute="top" secondItem="Bvh-ul-xjI" secondAttribute="top" constant="60" id="yDd-aq-5Rg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vn2-3D-krd"/>
                     </view>
@@ -97,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqM-Kq-Cqx" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-15681" y="-24"/>
+            <point key="canvasLocation" x="-15682.4" y="-24.7376311844078"/>
         </scene>
     </scenes>
     <resources>
